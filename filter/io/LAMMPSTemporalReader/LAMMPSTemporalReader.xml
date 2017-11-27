@@ -1,0 +1,96 @@
+<ServerManagerConfiguration>
+  <ProxyGroup name="sources">
+    <SourceProxy name="LAMMPSTemporalReader" 
+                class="LAMMPSTemporalReader" 
+                label="LAMMPSTemporalReader">
+      <Documentation
+         long_help="Read .LAMMPS file(s)."
+         short_help="Read .LAMMPS file(s).">
+      </Documentation>
+      <!--StringVectorProperty
+            name="FileName"
+            animateable="0"
+            command="SetFileName"
+            number_of_elements="1">
+        <FileListDomain name="files"/>
+        <Documentation>
+          This property specifies the file name for the LAMMPS reader.
+        </Documentation>
+      </StringVectorProperty-->
+      
+      <StringVectorProperty animateable="0"
+                            clean_command="RemoveAllFileNames"
+                            command="AddFileName"
+                            name="FileNames"
+                            number_of_elements="0"
+                            panel_visibility="never"
+                            repeat_command="1">
+        <FileListDomain name="files" />
+        <Documentation>The list of files to be read by the reader.</Documentation>
+      </StringVectorProperty>
+      
+      <DoubleVectorProperty
+        name="TimestepValues"
+        repeatable="1"
+        information_only="1">
+          <TimeStepsInformationHelper/>
+          <Documentation>
+            Available timestep values.
+          </Documentation>
+      </DoubleVectorProperty>
+
+      <IntVectorProperty command="SetCalculateBrokenBonds"
+                          default_values="0"
+                          name="CalculateBrokenBonds"
+                          number_of_elements="1" >
+        <BooleanDomain name="bool" />
+        <Documentation>Specify whether to calculate broken bonds</Documentation>
+      </IntVectorProperty>
+
+      <IntVectorProperty command="SetCalculateBondLength"
+                          default_values="1"
+                          name="CalculateBondLength"
+                          number_of_elements="1" >
+        <BooleanDomain name="bool" />
+        <Documentation>Specify whether to calculate current bond length</Documentation>
+      </IntVectorProperty>
+      
+      <IntVectorProperty command="SetCalculateRefBondLength"
+                          default_values="1"
+                          name="CalculateRefBondLength"
+                          number_of_elements="1" >
+        <BooleanDomain name="bool" />
+        <Documentation>Specify whether to calculate reference bond length</Documentation>
+      </IntVectorProperty>
+
+      <IntVectorProperty command="SetLoadBonds"
+                          default_values="0"
+                          name="LoadBonds"
+                          number_of_elements="1" >
+        <BooleanDomain name="bool" />
+        <Documentation>Load Bonds. If false, vertex cells for points are created.</Documentation>
+      </IntVectorProperty>
+      
+      <IntVectorProperty command="SetFilterBondsByLength"
+                          default_values="1"
+                          name="FilterBondsByLength"
+                          number_of_elements="1" >
+        <BooleanDomain name="bool" />
+        <Documentation>Skip Bonds that are longer than max bond length.</Documentation>
+      </IntVectorProperty>
+      
+      <DoubleVectorProperty command="SetMaxBondLength"
+                          default_values="1.0"
+                          name="MaxBondLength"
+                          number_of_elements="1" >
+      </DoubleVectorProperty>
+      
+      <Hints>
+        <ReaderFactory 
+          extensions="LAMMPS"
+          file_description="LAMMPS File Format" />
+      </Hints>
+    </SourceProxy>
+  </ProxyGroup>
+</ServerManagerConfiguration>
+

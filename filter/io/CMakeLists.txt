@@ -1,0 +1,2 @@
+add_subdirectory(LAMMPSTemporalReader)
+add_subdirectory(LAMMPSWriter)
