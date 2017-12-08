@@ -1,0 +1,82 @@
+<ServerManagerConfiguration>
+  <ProxyGroup name="filters">
+    <SourceProxy name="PeriConnectedComponents" 
+                class="PeriConnectedComponents" 
+                label="PeriConnectedComponents">
+    <Documentation
+        long_help="Calculate and expose PeriConnectedComponents"
+        short_help="PeriConnectedComponents">
+    </Documentation>
+    <InputProperty
+        name="Input"
+        command="SetInputConnection">
+        <ProxyGroupDomain name="groups">
+          <Group name="sources" />
+          <Group name="filters" />
+        </ProxyGroupDomain>
+      <DataTypeDomain name="input_type">
+        <DataType value="vtkPolyData" />
+      </DataTypeDomain>
+      <InputArrayDomain name="input_array1" attribute_type="point"
+            number_of_components="1" />
+      <InputArrayDomain name="input_array2" attribute_type="cell"
+            number_of_components="1" />
+    </InputProperty>
+    
+    <StringVectorProperty command="SetInputArrayToProcess"
+                        element_types="0 0 0 0 2"
+                        label="Scalar Array"
+                        name="SelectInputScalars"
+                        number_of_elements="5">
+    <ArrayListDomain name="array_list"
+                     attribute_type="Scalars"
+                     input_domain_name="input_array1">
+      <RequiredProperties>
+        <Property name="Input" function="Input" />
+      </RequiredProperties>
+    </ArrayListDomain>
+    <Documentation>This property lists the name of the scalar array that holds the damage values.</Documentation>
+    </StringVectorProperty> 
+    
+    <StringVectorProperty command="SetInputArrayToProcess"
+        element_types="0 0 0 0 2"
+        name="SelectInputCellScalars"
+        number_of_elements="5"
+        default_values="1"
+        label="Reference Bond lengths"
+        >
+           <!-- default_values=1 is important to set here and not in Tensors
+                previously. Omitting the setting here would mess up changed
+                tensor input being recognized as tensor input and not as
+                scalar input and vice versa. -->
+      <ArrayListDomain name="array_list" 
+                       attribute_type="Scalars"
+                       input_domain_name="input_array2">
+        <RequiredProperties>
+          <Property name="Input" function="Input" />
+        </RequiredProperties>
+      </ArrayListDomain>
+      <Documentation>This property indicates the name of the cell scalar array to use reference bond lengths</Documentation>
+    </StringVectorProperty>
+    
+      <DoubleVectorProperty command="SetMaxDamage"
+                            default_values="0.5"
+                            name="MaxDamage"
+                            number_of_elements="1">
+        <DoubleRangeDomain max="1.0"
+                           min="0.0"
+                           name="range" />
+        <Documentation>This property specifies the maximum bond length for calculating the connected components.</Documentation>
+      </DoubleVectorProperty>
+ 
+      <DoubleVectorProperty command="SetMaxBondlength"
+                            default_values="0.1"
+                            name="MaxBondlength"
+                            number_of_elements="1">
+        <Documentation>This property specifies the maximum bond length for calculating the connected components.</Documentation>
+      </DoubleVectorProperty>
+ 
+    </SourceProxy>
+  </ProxyGroup>
+</ServerManagerConfiguration>
+
