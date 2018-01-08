@@ -1,0 +1,26 @@
+<ServerManagerConfiguration>
+  <ProxyGroup name="filters">
+    <!-- ==================================================================== -->
+    <SourceProxy class="CountBonds"
+                 name="CountBonds"
+                 label="Count Bonds">
+                 
+      <InputProperty command="SetInputConnection"
+                     name="Input">
+        <ProxyGroupDomain name="groups">
+          <Group name="sources" />
+          <Group name="filters" />
+        </ProxyGroupDomain>
+        <DataTypeDomain name="input_type">
+          <DataType value="vtkPolyData" />
+        </DataTypeDomain>
+        <InputArrayDomain name="input_array"
+                          number_of_components="1"
+                          optional="1" />
+        <Documentation>This property specifies the dataset on which the CountBonds filter will operate.</Documentation>
+      </InputProperty>
+      <!-- End Clip -->
+    </SourceProxy>
+    <!-- ==================================================================== -->
+     </ProxyGroup>
+</ServerManagerConfiguration>

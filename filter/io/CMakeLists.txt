@@ -1,2 +1,5 @@
 add_subdirectory(LAMMPSTemporalReader)
 add_subdirectory(LAMMPSWriter)
+add_subdirectory(ExtractBrokenBonds)
+add_subdirectory(CleanBonds)
+add_subdirectory(CountBonds)

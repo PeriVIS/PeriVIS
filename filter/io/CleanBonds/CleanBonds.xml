@@ -1,0 +1,31 @@
+<ServerManagerConfiguration>
+  <ProxyGroup name="filters">
+    <SourceProxy name="CleanBonds" class="CleanBonds" label="CleanBonds">
+    <Documentation
+        long_help="Calculate and expose CleanBonds"
+        short_help="CleanBonds">
+    </Documentation>
+    <InputProperty
+        name="Input"
+        command="SetInputConnection">
+        <ProxyGroupDomain name="groups">
+          <Group name="sources" />
+          <Group name="filters" />
+        </ProxyGroupDomain>
+      <DataTypeDomain name="input_type">
+        <DataType value="vtkDataSet" />
+      </DataTypeDomain>
+    </InputProperty>
+    
+      <DoubleVectorProperty command="SetMaxBondLength"
+                            default_values="1.0"
+                            name="MaxBondLength"
+                            number_of_elements="1">
+        <Documentation>Set the maximum length of bonds to copy</Documentation>
+      </DoubleVectorProperty>
+
+    </SourceProxy>
+
+  </ProxyGroup>
+  <!-- End Filters Group -->
+</ServerManagerConfiguration>
