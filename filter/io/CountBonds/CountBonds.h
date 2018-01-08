@@ -1,3 +1,10 @@
+/*=========================================================================
+
+Program:   Visualization Toolkit
+
+Copyright (c) Michael Bußler
+
+=========================================================================*/
 
 #ifndef __CountBonds_h
 #define __CountBonds_h

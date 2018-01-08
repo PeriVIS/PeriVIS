@@ -1,4 +1,10 @@
+/*=========================================================================
 
+Program:   Visualization Toolkit
+
+Copyright (c) Michael Bußler
+
+=========================================================================*/
 
 #include "LAMMPSTemporalReader.h"
 

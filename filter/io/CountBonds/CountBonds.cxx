@@ -1,3 +1,11 @@
+/*=========================================================================
+
+Program:   Visualization Toolkit
+
+Copyright (c) Michael Bußler
+
+=========================================================================*/
+
 #include "CountBonds.h"
 
 #include "vtkCellArray.h"

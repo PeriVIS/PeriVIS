@@ -1,3 +1,11 @@
+/*=========================================================================
+
+Program:   Visualization Toolkit
+
+Copyright (c) Michael Bußler
+
+=========================================================================*/
+
 #ifndef __LAMMPSTemporalReader_h
 #define __LAMMPSTemporalReader_h
 

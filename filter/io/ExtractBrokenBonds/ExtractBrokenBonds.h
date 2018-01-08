@@ -1,3 +1,10 @@
+/*=========================================================================
+
+Program:   Visualization Toolkit
+
+Copyright (c) Michael Bußler
+
+=========================================================================*/
 
 #ifndef __ClipPolyData_h
 #define __ClipPolyData_h
