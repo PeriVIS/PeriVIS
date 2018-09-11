@@ -2,8 +2,12 @@
 
 ## Paraview plugins
 
-* fragment - Extraction of fragments, see [1]
+* fragment - Extraction of fragments, see Section 4.1 in [1]
 * io - Reader for the [LAMMPS](https://lammps.sandia.gov/) [file format](https://lammps.sandia.gov/doc/2001/data_format.html)   
+
+## Dependencies
+
+* [Paraview](https://www.paraview.org/) 
 
 ## Publications
 
