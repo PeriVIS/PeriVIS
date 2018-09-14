@@ -1,3 +1,11 @@
+/*=========================================================================
+
+Program:   Visualization Toolkit
+
+Copyright (c) Michael Bußler
+
+=========================================================================*/
+
 #include "ExtractBrokenBonds.h"
 
 #include "vtkCellArray.h"
