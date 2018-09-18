@@ -1,0 +1,77 @@
+<ServerManagerConfiguration>
+  <ProxyGroup name="filters">
+   <SourceProxy name="Sheppard" class="vtkShepardTensor">
+     
+    <InputProperty
+        name="Input"
+        command="SetInputConnection">
+        <ProxyGroupDomain name="groups">
+            <Group name="sources"/>
+            <Group name="filters"/>
+        </ProxyGroupDomain>
+        <DataTypeDomain name="input_type">
+            <DataType value="vtkDataSet"/>
+        </DataTypeDomain>
+        <InputArrayDomain name="input_array1" attribute_type="point" />
+     </InputProperty>
+     
+     <StringVectorProperty
+        name="SelectInputTensors"
+        command="SetInputArrayToProcess"
+        number_of_elements="5"
+        element_types="0 0 0 0 2"
+        label="Tensors"
+        >
+      <ArrayListDomain name="array_list" attribute_type="Tensors"
+          input_domain_name="input_array1">
+        <RequiredProperties>
+          <Property name="Input" function="Input" />
+        </RequiredProperties>
+      </ArrayListDomain>
+      <Documentation>
+              This property indicates the name of the tensor array on which to operate.
+      </Documentation>
+    </StringVectorProperty>
+
+     <DoubleVectorProperty
+        name="MaximumDistance"
+        command="SetMaximumDistance"
+        default_values="0.25"
+        number_of_elements="1">
+     </DoubleVectorProperty>
+     <DoubleVectorProperty
+        name="NullValue"
+        command="SetNullValue"
+        default_values="0.0"
+        number_of_elements="1">
+     </DoubleVectorProperty>
+      <DoubleVectorProperty
+         name="ModelBounds"
+         command="SetModelBounds"
+         number_of_elements="6"
+         default_values="-1 1 -1 1 -1 1" 
+         panel_visibility="advanced">         
+      </DoubleVectorProperty>
+      <IntVectorProperty command="SetUseInputBounds"
+                         default_values="1"
+                         name="UseInputBounds"
+                         number_of_elements="1"
+                         panel_visibility="advanced">
+        <BooleanDomain name="bool" />
+      </IntVectorProperty>      
+      <IntVectorProperty
+         name="SampleDimensions"
+         command="SetSampleDimensions"
+         number_of_elements="3"
+         default_values="50 50 50" >
+      </IntVectorProperty>
+      <IntVectorProperty command="SetProcessAllDataArrays"
+                         default_values="0"
+                         name="ProcessAllDataArrays"
+                         number_of_elements="1"
+                         panel_visibility="advanced">
+        <BooleanDomain name="bool" />
+      </IntVectorProperty>      
+   </SourceProxy>
+  </ProxyGroup> 
+</ServerManagerConfiguration>

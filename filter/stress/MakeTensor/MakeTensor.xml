@@ -1,0 +1,152 @@
+<ServerManagerConfiguration>
+  <ProxyGroup name="filters">
+    <SourceProxy name="MakeTensor" class="MakeTensor" label="MakeTensor">
+    <Documentation
+        long_help="Make Tensor from skalar arrays"
+        short_help="Rate of Strain">
+    </Documentation>
+    <InputProperty
+        name="Input"
+        command="SetInputConnection">
+        <ProxyGroupDomain name="groups">
+          <Group name="sources" />
+          <Group name="filters" />
+        </ProxyGroupDomain>
+      <DataTypeDomain name="input_type">
+        <DataType value="vtkDataSet" />
+      </DataTypeDomain>
+      <InputArrayDomain name="input_array1" attribute_type="point"
+            />
+      <InputArrayDomain name="input_array2" attribute_type="point"
+            />
+      <InputArrayDomain name="input_array3" attribute_type="point"
+            />
+      <InputArrayDomain name="input_array4" attribute_type="point"
+            />
+      <InputArrayDomain name="input_array5" attribute_type="point"
+            />
+      <InputArrayDomain name="input_array6" attribute_type="point"
+            />
+      <Documentation>
+        This property specifies the input to the MakeTensor filter.
+      </Documentation>
+    </InputProperty>
+
+    <StringVectorProperty
+        name="SelectInputTensors1"
+        command="SetInputArrayToProcess"
+        number_of_elements="5"
+        element_types="0 0 0 0 2"
+        label="Sxx"
+        >
+      <ArrayListDomain name="array_list" attribute_type="Skalar"
+          input_domain_name="input_array1">
+        <RequiredProperties>
+          <Property name="Input" function="Input" />
+        </RequiredProperties>
+      </ArrayListDomain>
+      <Documentation>
+              This property indicates the name of the skalar array on which to operate.
+      </Documentation>
+    </StringVectorProperty>
+
+    <StringVectorProperty
+        name="SelectInputTensors2"
+        default_values="1"
+        command="SetInputArrayToProcess"
+        number_of_elements="5"
+        element_types="0 0 0 0 2"
+        label="Syy"
+        >
+      <ArrayListDomain name="array_list" attribute_type="Skalar"
+          input_domain_name="input_array2">
+        <RequiredProperties>
+          <Property name="Input" function="Input" />
+        </RequiredProperties>
+      </ArrayListDomain>
+      <Documentation>
+              This property indicates the name of the skalar array on which to operate.
+      </Documentation>
+    </StringVectorProperty>
+
+    <StringVectorProperty
+        name="SelectInputTensors3"
+        default_values="2"
+        command="SetInputArrayToProcess"
+        number_of_elements="5"
+        element_types="0 0 0 0 2"
+        label="Szz"
+        >
+      <ArrayListDomain name="array_list" attribute_type="Skalar"
+          input_domain_name="input_array3">
+        <RequiredProperties>
+          <Property name="Input" function="Input" />
+        </RequiredProperties>
+      </ArrayListDomain>
+      <Documentation>
+              This property indicates the name of the skalar array on which to operate.
+      </Documentation>
+    </StringVectorProperty>
+
+    <StringVectorProperty
+        name="SelectInputTensors4"
+        default_values="3"
+        command="SetInputArrayToProcess"
+        number_of_elements="5"
+        element_types="0 0 0 0 2"
+        label="Sxy"
+        >
+      <ArrayListDomain name="array_list" attribute_type="Skalar"
+          input_domain_name="input_array4">
+        <RequiredProperties>
+          <Property name="Input" function="Input" />
+        </RequiredProperties>
+      </ArrayListDomain>
+      <Documentation>
+              This property indicates the name of the skalar array on which to operate.
+      </Documentation>
+    </StringVectorProperty>
+
+    <StringVectorProperty
+        name="SelectInputTensors5"
+        default_values="4"
+        command="SetInputArrayToProcess"
+        number_of_elements="5"
+        element_types="0 0 0 0 2"
+        label="Sxz"
+        >
+      <ArrayListDomain name="array_list" attribute_type="Skalar"
+          input_domain_name="input_array5">
+        <RequiredProperties>
+          <Property name="Input" function="Input" />
+        </RequiredProperties>
+      </ArrayListDomain>
+      <Documentation>
+              This property indicates the name of the skalar array on which to operate.
+      </Documentation>
+    </StringVectorProperty>
+
+    <StringVectorProperty
+        name="SelectInputTensors6"
+        default_values="5"
+        command="SetInputArrayToProcess"
+        number_of_elements="5"
+        element_types="0 0 0 0 2"
+        label="Syz"
+        >
+      <ArrayListDomain name="array_list" attribute_type="Skalar"
+          input_domain_name="input_array6">
+        <RequiredProperties>
+          <Property name="Input" function="Input" />
+        </RequiredProperties>
+      </ArrayListDomain>
+      <Documentation>
+              This property indicates the name of the skalar array on which to operate.
+      </Documentation>
+    </StringVectorProperty>
+    
+    </SourceProxy>
+
+  </ProxyGroup>
+  <!-- End Filters Group -->
+</ServerManagerConfiguration>

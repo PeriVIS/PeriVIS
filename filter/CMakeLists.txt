@@ -15,3 +15,7 @@ if (BUILD_IO_LAMMPS)
 	add_subdirectory( fragment )
 endif()
 
+option(BUILD_STRESS "Build the plugins for visualization of the stress" OFF)
+if (BUILD_STRESS)
+	add_subdirectory( stress )
+endif()

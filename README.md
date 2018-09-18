@@ -15,6 +15,20 @@ Figure 1: Extracted fragments | Figure 2: Corresponding histogram
 -DBUILD_FRAGMENT=ON 
 ```
 
+### stress 
+
+Volume rendering of the nodes and visualizaiton of the vonMises stress tensor, see Section 4.2 in [1]. Figures shows the volume rendering of the Standford bunny and the vonMises stress.
+
+
+Figure 1: Extracted fragments | 
+:------------------------:|
+![Stress](./figures/frame.0100.jpg?raw=true "Stress")|
+
+
+```
+-DBUILD_STRESS=ON 
+```
+
 ### io 
 
 Reader for the [LAMMPS](https://lammps.sandia.gov/) [file format](https://lammps.sandia.gov/doc/2001/data_format.html)   
