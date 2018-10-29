@@ -4,7 +4,7 @@
 
 ### fragment 
 
-Extraction of fragments and histograms, see Section 4.1 in [1]. The Figure 1 shows the extracted fracments and Figure 2 shows the corresponding histogram
+Extraction of fragments and histograms, see Section 4.1 in [1]. The Figure 1 shows the extracted fracments and Figure 2 shows the corresponding histogram. A video of the development of the extracted fragments is available [here](https://archive.ins.uni-bonn.de/schweitzer.ins.uni-bonn.de/people/diehl/video/fragments.mp4).
 
 Figure 1: Extracted fragments | Figure 2: Corresponding histogram
 :------------------------:|:----------------------------------------:
@@ -17,7 +17,7 @@ Figure 1: Extracted fragments | Figure 2: Corresponding histogram
 
 ### stress 
 
-Volume rendering of the nodes and visualizaiton of the vonMises stress tensor, see Section 4.2 in [1]. Figures shows the volume rendering of the Standford bunny and the vonMises stress.
+Volume rendering of the nodes and visualizaiton of the vonMises stress tensor, see Section 4.2 in [1]. Figures shows the volume rendering of the Standford bunny and the vonMises stress. An example video is available [here](https://archive.ins.uni-bonn.de/schweitzer.ins.uni-bonn.de/people/diehl/video/bunny.mp4).
 
 
 Figure 1: Extracted fragments | 
