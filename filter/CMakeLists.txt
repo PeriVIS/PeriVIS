@@ -11,7 +11,7 @@ if (BUILD_IO_LAMMPS)
 endif()
 
 option(BUILD_FRAGMENT "Build the plugins for extraction of fragments" OFF)
-if (BUILD_IO_LAMMPS)
+if (BUILD_FRAGMENT)
 	add_subdirectory( fragment )
 endif()
 
