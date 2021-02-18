@@ -11,7 +11,7 @@ ELSE (ParaView_SOURCE_DIR)
   INCLUDE(${PARAVIEW_USE_FILE})
 ENDIF (ParaView_SOURCE_DIR)
 
-ADD_PARAVIEW_PLUGIN( PeriConnectedComponents "1.0"
+PARAVIEW_ADD_PLUGIN( PeriConnectedComponents "1.0"
   SERVER_MANAGER_XML PeriConnectedComponents.xml
   SERVER_MANAGER_SOURCES PeriConnectedComponents.cxx
 )

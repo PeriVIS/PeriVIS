@@ -17,7 +17,7 @@ ENDIF (ParaView_SOURCE_DIR)
 #linalg
 #include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../common/)
 
-ADD_PARAVIEW_PLUGIN( VonMiesesStress "1.0"
+PARAVIEW_ADD_PLUGIN( VonMiesesStress "1.0"
   SERVER_MANAGER_XML  VonMisesStress.xml
   SERVER_MANAGER_SOURCES VonMisesStress.cxx
 )

@@ -5,7 +5,7 @@ PROJECT(ShepardMethod)
 FIND_PACKAGE(ParaView REQUIRED)
 INCLUDE(${PARAVIEW_USE_FILE})
 
-ADD_PARAVIEW_PLUGIN( ShepardMethod "1.0"
+PARAVIEW_ADD_PLUGIN( ShepardMethod "1.0"
   SERVER_MANAGER_XML ShepardMethod.xml
   SERVER_MANAGER_SOURCES vtkShepardTensor.cxx  
   )

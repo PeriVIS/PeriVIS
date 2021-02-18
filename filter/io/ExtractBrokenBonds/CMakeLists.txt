@@ -5,7 +5,7 @@ PROJECT(ExtractBrokenBonds)
 FIND_PACKAGE(ParaView REQUIRED)
 INCLUDE(${PARAVIEW_USE_FILE})
 
-ADD_PARAVIEW_PLUGIN( ExtractBrokenBonds "1.0"
+PARAVIEW_ADD_PLUGIN( ExtractBrokenBonds "1.0"
   SERVER_MANAGER_XML ExtractBrokenBonds.xml
   SERVER_MANAGER_SOURCES ExtractBrokenBonds.cxx  
 )

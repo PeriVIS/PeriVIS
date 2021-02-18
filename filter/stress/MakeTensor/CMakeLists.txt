@@ -17,7 +17,7 @@ ENDIF (ParaView_SOURCE_DIR)
 #linalg
 #include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../common/)
 
-ADD_PARAVIEW_PLUGIN( MakeTensor "1.0"
+PARAVIEW_ADD_PLUGIN( MakeTensor "1.0"
   SERVER_MANAGER_XML  MakeTensor.xml
   SERVER_MANAGER_SOURCES MakeTensor.cxx
 )
