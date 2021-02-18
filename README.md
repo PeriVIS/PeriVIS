@@ -40,7 +40,7 @@ Reader for the [LAMMPS](https://lammps.sandia.gov/) [file format](https://lammps
 
 ### Dependencies
 
-* [Paraview](https://www.paraview.org/) most be build from source
+* [Paraview](https://www.paraview.org/) must be build from source
 * [CMake](https://cmake.org/) >= 2.8
 
 ### Building the plugins
